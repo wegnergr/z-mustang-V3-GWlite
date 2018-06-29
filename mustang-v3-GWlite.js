@@ -27,6 +27,8 @@ function importContacts() {
     loadIndexAndContacts();
 }
 
+
+// I thought a create Contacts would be similar to save contacts
 function createContactsToServer() {
     console.log("createContactsToServer()");
     xmlhttp = new XMLHttpRequest();
@@ -90,7 +92,7 @@ function viewCurrentContact() {
     document.getElementById("stateID").value = currentContact.state;
     document.getElementById("zipID").value = currentContact.zip;  
 
-    // Todo: Add additional fields.
+    // Todo: did add additional fields in my version 2
     document.getElementById("statusID").innerHTML = "Viewing contact " + (currentContactIndex+1) + " of " + contactArray.length;
 }
 
@@ -117,6 +119,28 @@ function next() {
 
 function add() {
     console.log('add()**');
+//function createContactsToServer() {
+//    console.log("createContactsToServer()");
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            console.log('Response: ' + this.responseText);
+            setStatus(this.responseText)
+        }
+    };
+    xmlhttp.open("POST", "create-contacts.php", true);
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlhttp.send("contacts=" + JSON.stringify(contactArray));   
+}
+
+
+
+
+
+
+
+
+
 
     // Todo: Implement add functionality by inserting new element into array.
 }
