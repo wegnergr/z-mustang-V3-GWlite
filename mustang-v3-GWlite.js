@@ -113,14 +113,11 @@ function next() {
     currentContact = contactArray[currentContactIndex];
     viewCurrentContact();
     
-    // Todo: Disable next button when there is no next item.
-    // Todo: Save changed items to contacts array and resort array.
 }
 
 function add() {
     console.log('add()**');
-//function createContactsToServer() {
-    console.log("createContactsToServer()");
+    //console.log("createContactsToServer()");
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -137,7 +134,7 @@ function add() {
 function remove() {
     console.log('remove()');
 
-    // Todo: Implement delete functionality by deleting element from array.
+    // Todo: Implement delete functionality - my idea was to delete the entry by saying $array [2] as an example
 }
 
 function ZipToCityState() {
@@ -212,7 +209,7 @@ function loadNextContact(URL) {
             document.getElementById("statusID").innerHTML = "Contacts Loaded (" + contactURLArray.length + ")";
             viewCurrentContact()
 
-            //Todo: Sort contacts array.
+            //Todo: Sort contacts array.      sort($Array)
         }
     }
     contactRequest.send();
