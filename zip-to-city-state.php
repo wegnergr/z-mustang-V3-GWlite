@@ -95,6 +95,7 @@
         "60195" => "Schaumburg, IL",
         "60196" => "Schaumburg, IL",
         "60197" => "Carol Stream, IL",
+        "60544" => "Plainfield, IL",
         "60199" => "Carol Stream, IL"
     );
     
