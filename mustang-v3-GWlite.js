@@ -120,7 +120,7 @@ function next() {
 function add() {
     console.log('add()**');
 //function createContactsToServer() {
-    console.log("createContactsToServer()");
+ //   console.log("createContactsToServer()");
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -131,17 +131,6 @@ function add() {
     xmlhttp.open("POST", "create-contacts.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("contacts=" + JSON.stringify(contactArray));   
-}
-
-
-
-
-
-
-
-
-
-
     // Todo: Implement add functionality by inserting new element into array.
 }
 
