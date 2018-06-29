@@ -1,1 +1,1 @@
-# The z-mustang-v3-lite porject is intented to be a reference implementation of the Mustang contact manager application.
+# The z-mustang-v3-GWlite porject is intented to be a reference implementation of the Mustang contact manager application.

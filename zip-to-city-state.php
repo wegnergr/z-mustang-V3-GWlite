@@ -55,6 +55,7 @@
         "60151" => "Maple Park, IL",
         "60152" => "Marengo, IL",
         "60153" => "Maywood, IL",
+        "60544" => "Plainfield, IL",
         "60154" => "Westchester, IL",
         "60155" => "Broadview, IL",
         "60156" => "Lake In The Hills, IL",
