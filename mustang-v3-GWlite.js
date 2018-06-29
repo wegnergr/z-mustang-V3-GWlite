@@ -120,7 +120,7 @@ function next() {
 function add() {
     console.log('add()**');
 //function createContactsToServer() {
-//    console.log("createContactsToServer()");
+    console.log("createContactsToServer()");
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
