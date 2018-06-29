@@ -27,6 +27,20 @@ function importContacts() {
     loadIndexAndContacts();
 }
 
+function createContactsToServer() {
+    console.log("createContactsToServer()");
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            console.log('Response: ' + this.responseText);
+            setStatus(this.responseText)
+        }
+    };
+    xmlhttp.open("POST", "create-contacts.php", true);
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlhttp.send("contacts=" + JSON.stringify(contactArray));   
+}
+
 function saveContactsToServer() {
     console.log("saveContactsToServer()");
     xmlhttp = new XMLHttpRequest();
